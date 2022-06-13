@@ -8,12 +8,9 @@ flex-direction: column;
 background-color: rgb(1, 108, 134);
 "
 >
-    <h1 style="margin-bottom: 2.5rem; color: rgb(238, 94, 27);">Forgot Your Password?</h1>
+    <h1 style="margin-bottom: 2.5rem; color: rgb(238, 94, 27);">Sign In Page</h1>
 
-    <input type="email" placeholder="Email" 
-    #EmailInput
-    (input)="updateEmail(EmailInput.value)"
-    [value]="email"
+    <input type="text" placeholder="Username" 
     style="
     margin-bottom: 1rem;
     width: 13rem;
@@ -22,23 +19,7 @@ background-color: rgb(1, 108, 134);
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     ">
-    <input type="text" placeholder="New Password"
-    #NewPassword
-    (input)="updateNewPassword(NewPassword.value)"
-    [value]="newPassword"
-    style="
-    margin-bottom: 1rem; 
-    width: 13rem;
-    height: 1.5rem;
-    font-size: 1.25rem;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-    ">
-
-    <input type="text" placeholder="Confirm Password"
-    #ConfirmPassword
-    (input)="updateConfirmPassword(ConfirmPassword.value)"
-    [value]="confirmPassword"
+    <input type="password" placeholder="Password"
     style="
     margin-bottom: 1.5rem; 
     width: 13rem;
@@ -61,11 +42,22 @@ background-color: rgb(1, 108, 134);
     "
     onmouseover="this.style.backgroundColor='rgb(1, 108, 134)'; this.style.color='rgb(238, 94, 27)'"
     onmouseout="this.style.backgroundColor='rgb(238, 94, 27)'; this.style.color='black'"
-    (click)="attemptReset()"
-    >Reset Password</button>
+    (click)="signIn()"
+    >Sign In</button>
 
-    <h3 style="color: red">{{error}}</h3>
-
+    <button
+    style="
+    background-color: transparent;
+    border: 2px solid rgb(1, 108, 134);
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    "
+    onmouseover="this.style.border='2px solid black'"
+    onmouseout="this.style.border='2px solid rgb(1, 108, 134)'"
+    (click)="forgotPasswordClicked()"
+    >Forgot Password?</button>
 
 </div>
 
