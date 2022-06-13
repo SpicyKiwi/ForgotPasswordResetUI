@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ForgotPasswordResetUI';
 
-  forgotPassword: boolean = true
+  forgotPassword: boolean = false
 
   updateForgotPassword() {
     this.forgotPassword = true

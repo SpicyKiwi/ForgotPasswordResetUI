@@ -62,11 +62,15 @@ background-color: rgb(1, 108, 134);
     onmouseover="this.style.backgroundColor='rgb(1, 108, 134)'; this.style.color='rgb(238, 94, 27)'"
     onmouseout="this.style.backgroundColor='rgb(238, 94, 27)'; this.style.color='black'"
     (click)="attemptReset()"
-    >Reset Password</button>
+    >Change</button>
 
     <h3 style="color: red">{{error}}</h3>
 
+    <app-third-screen
+    *ngIf="changeConfirmed"
+    style="
+    position: absolute;
+    z-index: 1;
+    "></app-third-screen>
 
 </div>
-
-//clickable: forgot pass
