@@ -25,4 +25,5 @@ export class FirstPageComponent implements OnInit {
     this.updateForgotPassword.emit(this.forgotPassword)
   }
 
+
 }
